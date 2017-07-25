@@ -1,9 +1,9 @@
 {
-  "name": "autocomplete-python",
+  "name": "autocomplete-python-jedi",
   "main": "./lib/main",
   "version": "1.9.1",
-  "description": "Python completions for packages, variables, methods, functions, with their arguments. Powered by your choice of Jedi or Kite.",
-  "repository": "https://github.com/autocomplete-python/autocomplete-python",
+  "description": "Python completions for packages, variables, methods, functions, with their arguments. Powered by Jedi.",
+  "repository": "https://github.com/brennv/autocomplete-python-jedi",
   "license": "GPL",
   "engines": {
     "atom": ">=0.194.0 <2.0.0"
@@ -49,7 +49,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/autocomplete-python/autocomplete-python/issues"
+    "url": "https://github.com/brennv/autocomplete-python-jedi/issues"
   },
   "keywords": [
     "python",
