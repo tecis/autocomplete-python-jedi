@@ -21,7 +21,7 @@ module.exports =
       title: 'Autocomplete Function Parameters'
       description: '''Automatically complete function arguments after typing
       left parenthesis character. Use completion key to jump between
-      arguments. See `autocomplete-python:complete-arguments` command if you
+      arguments. See `autocomplete-python-jedi:complete-arguments` command if you
       want to trigger argument completions manually. See README if it does not
       work for you.'''
     pythonPaths:
@@ -31,7 +31,7 @@ module.exports =
       title: 'Python Executable Paths'
       description: '''Optional semicolon separated list of paths to python
       executables (including executable names), where the first one will take
-      higher priority over the last one. By default autocomplete-python will
+      higher priority over the last one. By default autocomplete-python-jedi will
       automatically look for virtual environments inside of your project and
       try to use them as well as try to find global python executable. If you
       use this config, automatic lookup will have lowest priority.
@@ -111,7 +111,7 @@ module.exports =
       maximum: 99
       order: 11
       title: 'Suggestion Priority'
-      description: '''You can use this to set the priority for autocomplete-python
+      description: '''You can use this to set the priority for autocomplete-python-jedi
       suggestions. For example, you can use lower value to give higher priority
       for snippets completions which has priority of 2.'''
     enableTouchBar:

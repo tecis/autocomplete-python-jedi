@@ -1,5 +1,5 @@
 log = require './log'
-if atom.config.get('autocomplete-python.enableTouchBar')
+if atom.config.get('autocomplete-python-jedi.enableTouchBar')
   touchbar = require './touchbar'
 
 module.exports =
@@ -51,12 +51,12 @@ _showSignatureOverlay: (event) ->
       description = description.trim()
       if not description
         return
-      view = document.createElement('autocomplete-python-suggestion')
+      view = document.createElement('autocomplete-python-jedi-suggestion')
       view.appendChild(document.createTextNode(description))
       decoration = editor.decorateMarker(marker, {
         type: 'overlay',
         item: view,
         position: 'head'
       })
-      if atom.config.get('autocomplete-python.enableTouchBar')
+      if atom.config.get('autocomplete-python-jedi.enableTouchBar')
         touchbar.update(results[0])

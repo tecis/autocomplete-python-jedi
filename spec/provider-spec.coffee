@@ -24,12 +24,12 @@ describe 'Python autocompletions', ->
     runs ->
       editor = atom.workspace.getActiveTextEditor()
       editor.setGrammar(atom.grammars.grammarsByScopeName['source.python'])
-      atom.packages.loadPackage('autocomplete-python').activationHooks = []
-    waitsForPromise -> atom.packages.activatePackage('autocomplete-python')
+      atom.packages.loadPackage('autocomplete-python-jedi').activationHooks = []
+    waitsForPromise -> atom.packages.activatePackage('autocomplete-python-jedi')
     runs ->
-      atom.packages.getActivePackage('autocomplete-python').mainModule.load()
+      atom.packages.getActivePackage('autocomplete-python-jedi').mainModule.load()
     runs -> provider = atom.packages.getActivePackage(
-      'autocomplete-python').mainModule.getProvider()
+      'autocomplete-python-jedi').mainModule.getProvider()
 
   it 'autocompletes builtins', ->
     editor.setText 'isinstanc'
