@@ -11,8 +11,3 @@
   'cmd-c': 'native!'
   'cmd-x': 'native!'
   'cmd-v': 'native!'
-
-'.platform-linux':
-  'ctrl-c': 'native!'
-  'ctrl-x': 'native!'
-  'ctrl-v': 'native!'
