@@ -12,11 +12,6 @@
   'cmd-x': 'native!'
   'cmd-v': 'native!'
 
-'.platform-win32':
-  'ctrl-c': 'native!'
-  'ctrl-x': 'native!'
-  'ctrl-v': 'native!'
-
 '.platform-linux':
   'ctrl-c': 'native!'
   'ctrl-x': 'native!'

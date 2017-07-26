@@ -1,7 +1,5 @@
 # Python Autocomplete Package [![Build Status](https://travis-ci.org/brennv/autocomplete-python-jedi.svg?branch=master)](https://travis-ci.org/brennv/autocomplete-python-jedi)
 
-Warning: Windows users are reporting [issues with copy/paste](https://github.com/brennv/autocomplete-python-jedi/issues). 
-
 Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by your choice of [Jedi](https://github.com/davidhalter/jedi)
 
 See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
