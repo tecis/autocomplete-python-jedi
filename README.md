@@ -2,7 +2,7 @@
 
 Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by [Jedi](https://github.com/davidhalter/jedi).
 
-**python-autocomplete-jedi** is a fork of **python-autocomplete** that reverts any cloud engine components.
+**python-autocomplete-jedi** is a fork of **python-autocomplete** for a local-only completion engine.
 
 See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
 
