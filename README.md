@@ -41,7 +41,7 @@ See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for 
 # Common problems
 
 * "Error: spawn UNKNOWN" on Windows
-  * Solution: Find your python executable and uncheck the "Run this program as an administrator". See issue [#22](https://github.com/sadovnychyi/autocomplete-python/issues/22)
+  * Solution: Find your python executable and uncheck the "Run this program as an administrator". 
 * You have a separated folder for virtualenvs (e.g. by using `virtualenvwrapper`) and all your virtualenvs are stored in e.g. `~/.virtualenvs/`
   * Create symlink to venv from your project root
     * OR
@@ -52,7 +52,6 @@ See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for 
   ```
   /Users/name/.virtualenvs/$PROJECT_NAME/bin/python3.4
   ```
-  * See issue [#143](https://github.com/sadovnychyi/autocomplete-python/issues/143)
 * No argument completion after I type left parenthesis character
   * Likely this is because you have non standard keyboard layout.
   Try to install the keyboard-localization package from: https://atom.io/packages/keyboard-localization
