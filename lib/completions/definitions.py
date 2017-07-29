@@ -51,4 +51,4 @@ def get_definitions(self, definitions, identifier=None):
                 'column': definition.column
             }
             _definitions.append(_definition)
-    return json.dumps({'id': identifier, 'results': _definitions})
+    return _definitions

@@ -1,5 +1,4 @@
-
-def get_usages(usages, identifier=None):
+def get_usages(usages):
     _usages = []
     for usage in usages:
         _usages.append({
@@ -9,4 +8,4 @@ def get_usages(usages, identifier=None):
             'line': usage.line,
             'column': usage.column,
         })
-    return json.dumps({'id': identifier, 'results': _usages})
+    return _usages

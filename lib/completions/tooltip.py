@@ -22,4 +22,4 @@ def get_tooltip(self, definitions, identifier=None):
             }
             _definitions.append(_definition)
             break
-    return json.dumps({'id': identifier, 'results': _definitions})
+    return _definitions

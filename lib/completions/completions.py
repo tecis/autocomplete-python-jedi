@@ -64,7 +64,7 @@ def get_completions(script, prefix=''):
         }
         if any([c['text'].split('=')[0] == _completion['text']
                 for c in _completions]):
-          # ignore function arguments we already have
-          continue
+            # ignore function arguments we already have
+            continue
         _completions.append(_completion)
-    return json.dumps({'id': identifier, 'results': _completions})
+    return _completions

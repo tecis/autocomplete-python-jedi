@@ -1,4 +1,3 @@
-
 def get_methods(script):
     _methods = []
     try:
@@ -16,7 +15,8 @@ def get_methods(script):
     for completion in completions:
         params = []
         if hasattr(completion, 'params'):
-            params = [p.description for p in completion.params if ARGUMENT_RE.match(p.description)]
+            params = [p.description for p in completion.params
+                      if ARGUMENT_RE.match(p.description)]
         if completion.parent().type == 'class':
             _methods.append({
                 'parent': completion.parent().name,
@@ -28,4 +28,4 @@ def get_methods(script):
                 'line': completion.line,
                 'column': completion.column,
             })
-    return json.dumps({'id': identifier, 'results': _methods})
+    return _methods
