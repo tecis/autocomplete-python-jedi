@@ -19,8 +19,7 @@ devnull = open(os.devnull, 'w')
 stdout, stderr = sys.stdout, sys.stderr
 
 
-# @classmethod
-def get_top_level_module(cls, path):
+def get_top_level_module(path):
     """Recursively walk through directories looking for top level module.
 
     Jedi will use current filepath to look for another modules at same
@@ -29,7 +28,7 @@ def get_top_level_module(cls, path):
     """
     _path, _ = os.path.split(path)
     if _path != path and os.path.isfile(os.path.join(_path, '__init__.py')):
-        return cls.get_top_level_module(_path)
+        return get_top_level_module(_path)
     return path
 
 
@@ -65,7 +64,7 @@ def process_request(request):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-    lookup = request.get('lookup', 'completions')  # hmmm
+    lookup = request.get('lookup', 'completions')
 
     script = jedi.api.Script(source=request['source'], line=request['line'] + 1,
                              column=request['column'], path=request.get('path', ''))
@@ -108,7 +107,6 @@ def watch():
             sys.stderr = stderr
             sys.stderr.write(traceback.format_exc() + '\n')
             sys.stderr.flush()
-        pass
 
 
 if __name__ == '__main__':
