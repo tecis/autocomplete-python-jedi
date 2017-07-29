@@ -46,10 +46,10 @@ module.exports =
         if data.indexOf('jedi') > -1
           if atom.config.get('autocomplete-python-jedi.outputProviderErrors')
             atom.notifications.addWarning(
-              '''Looks like this error originated from Jedi. Please do not
-              report such issues in autocomplete-python-jedi issue tracker. Report
-              them directly to Jedi. Turn off `outputProviderErrors` setting
-              to hide such errors in future. Traceback output:''', {
+              '''Looks like this error originated from Jedi. Please report this 
+              issue to autocomplete-python-jedi so we can help improve Jedi. 
+              Turn off the `outputProviderErrors` setting to hide such errors 
+              in future. Traceback output:''', {
               detail: "#{data}",
               dismissable: true})
         else
