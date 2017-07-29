@@ -1,0 +1,25 @@
+def get_tooltip(self, definitions, identifier=None):
+    _definitions = []
+    for definition in definitions:
+        if definition.module_path:
+            if definition.type == 'import':
+                definition = self._top_definition(definition)
+            if not definition.module_path:
+                continue
+
+            description = definition.docstring()
+            if description is not None:
+                description = description.strip()
+            if not description:
+                description = self._additional_info(definition)
+            _definition = {
+                'text': definition.name,
+                'type': self._get_definition_type(definition),
+                'fileName': definition.module_path,
+                'description': description,
+                'line': definition.line - 1,
+                'column': definition.column
+            }
+            _definitions.append(_definition)
+            break
+    return json.dumps({'id': identifier, 'results': _definitions})
