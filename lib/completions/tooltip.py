@@ -1,9 +1,12 @@
-def get_tooltip(self, definitions, identifier=None):
+from utils import  _top_definition, _additional_info, _get_definition_type
+
+
+def get_tooltip(definitions):
     _definitions = []
     for definition in definitions:
         if definition.module_path:
             if definition.type == 'import':
-                definition = self._top_definition(definition)
+                definition = _top_definition(definition)
             if not definition.module_path:
                 continue
 
@@ -11,10 +14,10 @@ def get_tooltip(self, definitions, identifier=None):
             if description is not None:
                 description = description.strip()
             if not description:
-                description = self._additional_info(definition)
+                description = _additional_info(definition)
             _definition = {
                 'text': definition.name,
-                'type': self._get_definition_type(definition),
+                'type': _get_definition_type(definition),
                 'fileName': definition.module_path,
                 'description': description,
                 'line': definition.line - 1,

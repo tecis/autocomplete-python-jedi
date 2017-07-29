@@ -1,34 +1,7 @@
-def get_call_signatures(script):
-    """Extract call signatures from jedi.api.Script object in failsafe way.
-
-    Returns:
-        Tuple with original signature object, name and value.
-    """
-    _signatures = []
-    try:
-        call_signatures = script.call_signatures()
-    except KeyError:
-        call_signatures = []
-    for signature in call_signatures:
-        for pos, param in enumerate(signature.params):
-            if not param.name:
-                continue
-            if param.name == 'self' and pos == 0:
-                continue
-            if WORD_RE.match(param.name) is None:
-                continue
-            try:
-                name, value = param.description.split('=')
-            except ValueError:
-                name = param.description
-                value = None
-            if name.startswith('*'):
-                continue
-            _signatures.append((signature, name, value))
-    return _signatures
+from utils import get_call_signatures
 
 
-def get_arguments(script):
+def get_arguments(script):  # TODO add config
     """Serialize response to be read from Atom.
 
     Args:
