@@ -1,7 +1,7 @@
 from utils import get_call_signatures
 
 
-def get_arguments(script):  # TODO add config
+def get_arguments(script, use_snippets):
     """Serialize response to be read from Atom.
 
     Args:
@@ -17,7 +17,7 @@ def get_arguments(script):  # TODO add config
     for _, name, value in get_call_signatures(script):
         if not value:
             arg = '${%s:%s}' % (i, name)
-        elif self.use_snippets == 'all':
+        elif use_snippets == 'all':
             arg = '%s=${%s:%s}' % (name, i, value)
         else:
             continue
