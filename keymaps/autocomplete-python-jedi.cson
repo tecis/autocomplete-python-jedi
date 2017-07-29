@@ -6,8 +6,3 @@
 
 '.platform-win32 atom-text-editor[data-grammar~=python]:not(.mini)':
   'ctrl-alt-g': 'autocomplete-python-jedi:go-to-definition'
-
-'.platform-darwin':
-  'cmd-c': 'native!'
-  'cmd-x': 'native!'
-  'cmd-v': 'native!'
