@@ -1,10 +1,8 @@
 # Python Autocomplete Jedi Package [![Build Status](https://travis-ci.org/brennv/autocomplete-python-jedi.svg?branch=master)](https://travis-ci.org/brennv/autocomplete-python-jedi)
 
-Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by [Jedi](https://github.com/davidhalter/jedi).
+Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by [Jedi](https://github.com/davidhalter/jedi). 
 
-**python-autocomplete-jedi** is a fork of **python-autocomplete**. The auxiliary interface with a closed-source cloud engine has been reverted in favor of [Jedi](https://github.com/davidhalter/jedi). 
-
-See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
+**python-autocomplete-jedi** is a streamlined fork of **python-autocomplete** in an effort to resolve these [issues](https://github.com/autocomplete-python/autocomplete-python/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20refactor%20OR%20owner%20OR%20telemetry%20). See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
 
 ![Demo](https://cloud.githubusercontent.com/assets/193864/12288427/61fe2114-ba0f-11e5-9832-98869180d87f.gif)
 
