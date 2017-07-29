@@ -1,8 +1,8 @@
 # Python Autocomplete Jedi Package [![Build Status](https://travis-ci.org/brennv/autocomplete-python-jedi.svg?branch=master)](https://travis-ci.org/brennv/autocomplete-python-jedi)
 
-Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by [Jedi](https://github.com/davidhalter/jedi). 
+Python packages, variables, methods and functions with their arguments autocompletion in [Atom](http://atom.io) powered by [Jedi](https://github.com/davidhalter/jedi).
 
-**python-autocomplete-jedi** is a streamlined fork of **python-autocomplete** in an effort to resolve these [issues](https://github.com/autocomplete-python/autocomplete-python/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20refactor%20OR%20owner%20OR%20telemetry%20). See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
+**autocomplete-python-jedi** is a streamlined fork of **autocomplete-python** to resolve these [issues](https://github.com/autocomplete-python/autocomplete-python/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20refactor%20OR%20owner%20OR%20telemetry%20). See [releases](https://github.com/brennv/autocomplete-python-jedi/releases) for release notes.
 
 ![Demo](https://cloud.githubusercontent.com/assets/193864/12288427/61fe2114-ba0f-11e5-9832-98869180d87f.gif)
 
@@ -39,7 +39,7 @@ Python packages, variables, methods and functions with their arguments autocompl
 # Common problems
 
 * "Error: spawn UNKNOWN" on Windows
-  * Solution: Find your python executable and uncheck the "Run this program as an administrator". 
+  * Solution: Find your python executable and uncheck the "Run this program as an administrator".
 * You have a separated folder for virtualenvs (e.g. by using `virtualenvwrapper`) and all your virtualenvs are stored in e.g. `~/.virtualenvs/`
   * Create symlink to venv from your project root
     * OR
