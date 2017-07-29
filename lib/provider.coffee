@@ -36,7 +36,7 @@ module.exports =
     log.debug 'Using interpreter', interpreter
     @provider = new @BufferedProcess
       command: interpreter or 'python'
-      args: [__dirname + '/completion.py']
+      args: [__dirname + '/app.py']
       stdout: (data) =>
         @_deserialize(data)
       stderr: (data) =>
@@ -46,9 +46,9 @@ module.exports =
         if data.indexOf('jedi') > -1
           if atom.config.get('autocomplete-python-jedi.outputProviderErrors')
             atom.notifications.addWarning(
-              '''Looks like this error originated from Jedi. Please report this 
-              issue to autocomplete-python-jedi so we can help improve Jedi. 
-              Turn off the `outputProviderErrors` setting to hide such errors 
+              '''Looks like this error originated from Jedi. Please report this
+              issue to autocomplete-python-jedi so we can help improve Jedi.
+              Turn off the `outputProviderErrors` setting to hide such errors
               in future. Traceback output:''', {
               detail: "#{data}",
               dismissable: true})
