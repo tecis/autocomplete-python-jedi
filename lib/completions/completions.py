@@ -2,7 +2,7 @@ from utils import (_get_call_signatures, _additional_info, _generate_signature,
                    _get_definition_type)
 
 
-def get_completions(script, prefix=''):  # TODO add config
+def get_completions(script, prefix='', fuzzy_matcher=False, show_doc_strings=True):
     """Serialize response to be read from Atom.
 
     Args:
@@ -17,7 +17,7 @@ def get_completions(script, prefix=''):  # TODO add config
     _completions = []
 
     for signature, name, value in _get_call_signatures(script):
-        if not self.fuzzy_matcher and not name.lower().startswith(prefix.lower()):
+        if not fuzzy_matcher and not name.lower().startswith(prefix.lower()):
             continue
         _completion = {
             'type': 'property',
@@ -31,7 +31,7 @@ def get_completions(script, prefix=''):  # TODO add config
             _completion['snippet'] = '%s=$1$0' % name
             _completion['text'] = name
             _completion['displayText'] = name
-        if self.show_doc_strings:
+        if show_doc_strings:
             _completion['description'] = signature.docstring()
         else:
             _completion['description'] = _generate_signature(
@@ -43,7 +43,7 @@ def get_completions(script, prefix=''):  # TODO add config
     except KeyError:
         completions = []
     for completion in completions:
-        if self.show_doc_strings:
+        if show_doc_strings:
             description = completion.docstring()
         else:
             description = _generate_signature(completion)
