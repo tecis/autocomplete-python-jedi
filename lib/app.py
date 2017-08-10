@@ -8,6 +8,9 @@ sys.path.append(os.path.dirname(__file__))
 import jedi
 # remove jedi from path after we import it so it will not be completed
 sys.path.pop(0)
+from completions import (get_definitions, get_tooltip, get_arguments,
+                         get_usages, get_methods, get_completions)
+sys.path.pop(0)
 
 WORD_RE = re.compile(r'\w')
 ARGUMENT_RE = re.compile(r'[a-zA-Z0-9_=\*"\']+')
