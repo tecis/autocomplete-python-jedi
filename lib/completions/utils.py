@@ -6,7 +6,7 @@ basic_types = {
 }
 
 
-def _get_definition_type(definition):
+def get_definition_type(definition):
     is_built_in = definition.in_builtin_module
     if definition.type not in ['import', 'keyword'] and is_built_in():
         return 'builtin'
@@ -15,7 +15,7 @@ def _get_definition_type(definition):
     return basic_types.get(definition.type, definition.type)
 
 
-def _top_definition(definition):
+def top_definition(definition):
     for d in definition.goto_assignments():
         if d == definition:
             continue
@@ -56,7 +56,7 @@ def get_call_signatures(script):
     return _signatures
 
 
-def _generate_signature(completion):
+def generate_signature(completion):
     """Generate signature with function arguments.
     """
     if completion.type in ['module'] or not hasattr(completion, 'params'):
@@ -66,7 +66,7 @@ def _generate_signature(completion):
         ', '.join(p.description for p in completion.params if p))
 
 
-def _additional_info(completion):
+def additional_info(completion):
     """Provide additional information about the completion object."""
     if completion._definition is None:  # TODO v0.10.2 issue
         return ''

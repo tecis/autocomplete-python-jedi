@@ -1,5 +1,5 @@
 def get_methods(script):
-    _methods = []
+    methods = []
     try:
         completions = script.completions()
     except KeyError:
@@ -18,7 +18,7 @@ def get_methods(script):
             params = [p.description for p in completion.params
                       if ARGUMENT_RE.match(p.description)]
         if completion.parent().type == 'class':
-            _methods.append({
+            methods.append({
                 'parent': completion.parent().name,
                 'instance': instance,
                 'name': completion.name,
@@ -28,4 +28,4 @@ def get_methods(script):
                 'line': completion.line,
                 'column': completion.column,
             })
-    return _methods
+    return methods

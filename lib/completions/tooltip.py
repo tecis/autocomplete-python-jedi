@@ -1,4 +1,4 @@
-from utils import  _top_definition, _additional_info, _get_definition_type
+from utils import  top_definition, additional_info, get_definition_type
 
 
 def get_tooltip(definitions):
@@ -6,7 +6,7 @@ def get_tooltip(definitions):
     for definition in definitions:
         if definition.module_path:
             if definition.type == 'import':
-                definition = _top_definition(definition)
+                definition = top_definition(definition)
             if not definition.module_path:
                 continue
 
@@ -14,7 +14,7 @@ def get_tooltip(definitions):
             if description is not None:
                 description = description.strip()
             if not description:
-                description = _additional_info(definition)
+                description = additional_info(definition)
             _definition = {
                 'text': definition.name,
                 'type': _get_definition_type(definition),

@@ -1,4 +1,4 @@
-from utils import _top_definition, _get_definition_type
+from utils import top_definition, get_definition_type
 
 
 def get_definitions(definitions):
@@ -15,12 +15,12 @@ def get_definitions(definitions):
     for definition in definitions:
         if definition.module_path:
             if definition.type == 'import':
-                definition = _top_definition(definition)
+                definition = top_definition(definition)
             if not definition.module_path:
                 continue
             _definition = {
                 'text': definition.name,
-                'type': _get_definition_type(definition),
+                'type': get_definition_type(definition),
                 'fileName': definition.module_path,
                 'line': definition.line - 1,
                 'column': definition.column
