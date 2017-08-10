@@ -1,4 +1,4 @@
-from utils import get_call_signatures
+from .utils import get_call_signatures
 
 
 def get_arguments(script, use_snippets):

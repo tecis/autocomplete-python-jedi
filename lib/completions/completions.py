@@ -1,4 +1,4 @@
-from utils import (get_call_signatures, additional_info, generate_signature,
+from .utils import (get_call_signatures, additional_info, generate_signature,
                    get_definition_type)
 
 

@@ -1,4 +1,4 @@
-from utils import  top_definition, additional_info, get_definition_type
+from .utils import  top_definition, additional_info, get_definition_type
 
 
 def get_tooltip(definitions):
