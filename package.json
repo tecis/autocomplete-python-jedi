@@ -3,7 +3,7 @@
   "main": "./lib/main",
   "version": "1.10.3-0",
   "description": "Python completions for packages, variables, methods, functions, with their arguments. Powered by Jedi.",
-  "repository": "https://github.com/brennv/autocomplete-python-jedi",
+  "repository": "https://github.com/tecis/autocomplete-python-jedi",
   "license": "GPL",
   "engines": {
     "atom": ">=0.194.0 <2.0.0"
@@ -39,16 +39,16 @@
   },
   "contributors": [
     {
-      "name": "Dmitry Sadovnychyi",
-      "email": "autocomplete-python@dmit.ro"
+      "name": "tecis",
+      "email": ""
     },
     {
-      "name": "Daniel Hung",
-      "email": "daniel@kite.com"
+      "name": "Tecis",
+      "email": ""
     }
   ],
   "bugs": {
-    "url": "https://github.com/brennv/autocomplete-python-jedi/issues"
+    "url": "https://github.com/tecis/autocomplete-python-jedi/issues"
   },
   "keywords": [
     "python",
